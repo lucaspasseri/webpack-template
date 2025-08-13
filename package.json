@@ -20,7 +20,12 @@
 	"homepage": "https://github.com/lucaspasseri/webpack-template#readme",
 	"description": "",
 	"devDependencies": {
+		"@eslint/css": "^0.10.0",
+		"@eslint/js": "^9.33.0",
+		"@eslint/json": "^0.13.1",
 		"css-loader": "^7.1.2",
+		"eslint": "^9.33.0",
+		"globals": "^16.3.0",
 		"html-webpack-plugin": "^5.6.3",
 		"style-loader": "^4.0.0",
 		"webpack": "^5.100.2",
