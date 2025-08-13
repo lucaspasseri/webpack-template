@@ -3,35 +3,37 @@ import globals from "globals";
 import json from "@eslint/json";
 import css from "@eslint/css";
 import { defineConfig } from "eslint/config";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
-	{
-		ignores: ["dist/**", "package-lock.json", "src/reset.css"],
-	},
-	{
-		files: ["**/*.{js,mjs,cjs}"],
-		plugins: { js },
-		extends: ["js/recommended"],
-		languageOptions: {
-			globals: globals.browser,
-		},
-	},
-	{
-		files: ["webpack.*.js"],
-		languageOptions: {
-			globals: globals.node,
-		},
-	},
-	{
-		files: ["**/*.json"],
-		plugins: { json },
-		language: "json/json",
-		extends: ["json/recommended"],
-	},
-	{
-		files: ["**/*.css"],
-		plugins: { css },
-		language: "css/css",
-		extends: ["css/recommended"],
-	},
+  {
+    ignores: ["dist/**", "package-lock.json", "src/reset.css"],
+  },
+  {
+    files: ["**/*.{js,mjs,cjs}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
+  {
+    files: ["webpack.*.js"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
+    files: ["**/*.json"],
+    plugins: { json },
+    language: "json/json",
+    extends: ["json/recommended"],
+  },
+  {
+    files: ["**/*.css"],
+    plugins: { css },
+    language: "css/css",
+    extends: ["css/recommended"],
+  },
+  eslintConfigPrettier,
 ]);
